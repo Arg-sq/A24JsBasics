@@ -41,8 +41,9 @@ classXutii();
 //   console.log(name);
 // });
 
-student.push("pawan"); //last element ma add
-student.unshift("ashesh"); //1st element add
+const arrofString = ["apple", "banana", "mango", "grapes"];
+arrofString.push("pawan"); //last element ma add
+arrofString.unshift("ashesh"); //1st element add
 
 student.pop(); //last element remove
 student.shift(); //1st element remove
