@@ -74,8 +74,8 @@ const a = [1, 2, 3, 4, 5, 6];
 const b = [3, 4, 5, 6, 7, 8];
 const c = [5, 6, 7, 8, 9, 10];
 
-const arrManipulator = (a1, a2, a3) => {
-  const mergedArr = [...a1, ...a2, ...a3];
+const arrManipulator = () => {
+  const mergedArr = [...a, ...b, ...c];
   const eleRemovedArr = mergedArr.slice(1);
   const uniqueElArr = [...new Set(eleRemovedArr)];
 
@@ -90,4 +90,4 @@ const arrManipulator = (a1, a2, a3) => {
   return result.filter((num) => num !== undefined);
 };
 
-console.log(arrManipulator(a, b, c));
+console.log(arrManipulator());
