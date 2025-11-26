@@ -73,9 +73,10 @@ const abc = () => "abc";
 const a = [1, 2, 3, 4, 5, 6];
 const b = [3, 4, 5, 6, 7, 8];
 const c = [5, 6, 7, 8, 9, 10];
-
 const arrManipulator = () => {
   const mergedArr = [...a, ...b, ...c];
+  // [1,2,3,4,5,6,3,4,5,6,7,8,5,6,7,8,9,10]
+  // {2,3,4,5,6,7,8,9,10}
   const eleRemovedArr = mergedArr.slice(1);
   const uniqueElArr = [...new Set(eleRemovedArr)];
 
