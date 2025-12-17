@@ -43,34 +43,55 @@ const obj = {
 
 // bool ? ----- : ****
 
+// [1,2,3,4,3].filter((num)=>num===3)
+// [3,3]
+// [1,2,3,4,5].find((num)=>num===3)
+// 3
 const userData = [
   {
     id: 1,
     name: "ashesh",
     role: "lecturer",
+    experience: 5,
   },
   {
     id: 2,
     name: "gagan",
     role: "student",
+    // experience:0
   },
   {
     id: 3,
     name: undefined,
     role: "lecturer",
+    experience: 3,
   },
 ];
-
+// ["ashesh", "N/A"]
 // func that checks if array has role lecturer, if yes return the names of lecturer in array, if lecturer has no name return N/A
 
 const getLecturerNames = () => {
-  const arrayHasLecturer = !!userData.find((user) => user.role === "lecturer");
+  const arrayHasLecturer = !!userData.find((el) => el.role === "lecturer");
 
   let result = [];
   if (arrayHasLecturer) {
     result = userData
       .filter((user) => user.role === "lecturer")
-      .map((user) => user.name ?? "N/A");
+      //  [
+      //  {
+      //   id: 1,
+      //   name: "ashesh",
+      //   role: "lecturer",
+      // },
+      //   {
+      //   id: 3,
+      //   name: undefined,
+      //   role: "lecturer",
+      // },
+      // ]
+      .map((user) => {
+        return user.name ?? "N/A";
+      });
   }
   return result;
 };
